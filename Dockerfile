@@ -17,5 +17,5 @@ EXPOSE 80
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY . .
 ENTRYPOINT ["dotnet", "TC_Authentication_Setup_Service.dll"]
